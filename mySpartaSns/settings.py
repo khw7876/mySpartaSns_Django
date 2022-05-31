@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-(4iqm7f648aplr*4q5dd83r+75kz5!2f3c&71rqp&-^7_mxg4%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -39,7 +39,15 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tweet',
     'user',
+    'restaurant',
+    'taggit.apps.TaggitAppConfig',
+    'taggit_templatetags2',
 ]
+
+
+TAGGIT_CASE_INSENSITIVE = True
+TAGGIT_LIMIT = 50
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

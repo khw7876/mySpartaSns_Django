@@ -16,9 +16,14 @@
                 <div class="form-group mt-2 mb-2">
                     <label for="password">비밀번호</label>
                     <input type="password" class="form-control" id="password" name="password">
-                </div>
-                <hr>
-                <div style="float: right">
+                    </div>
+                    <hr>
+                    {% if error %}
+                    <div class="alert alert-danger" role="alert">
+                        {{ error }}
+                    </div>
+                    {% endif %}
+                    <divstyle="float: right">
                     <button type="submit" class="btn btn-primary">로그인</button>
                     <a href="/sign-up" class="btn btn-secondary">회원가입 페이지로</a>
                 </div>
